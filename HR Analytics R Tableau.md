@@ -108,3 +108,38 @@ The `left` variable is used as the main outcome variable:
 The dataset is useful for educational and portfolio-based HR analytics work because it includes key variables related to employee retention.
 
 However, because the dataset is anonymized and does not provide full organizational context, the analysis focuses on identifying patterns and relationships rather than making final causal claims.
+# 3. Data Preparation
+
+## Overview
+
+In this step, the HR dataset was imported into R and prepared for analysis. The preparation process included loading packages, uploading the dataset, checking data structure, identifying missing values, removing duplicate records, and creating new variables for analysis and Tableau visualization.
+## 3.1 Load Required Packages
+```r
+# Install packages if needed
+install.packages("tidyverse")
+install.packages("janitor")
+install.packages("readr")
+
+# Load tidyverse for data cleaning, transformation, and analysis
+library(tidyverse)
+
+# Load janitor for checking and cleaning column names
+library(janitor)
+
+# Load readr for importing and exporting CSV files
+library(readr)
+```
+The following R packages were used for data import, cleaning, transformation, and summary analysis.
+## 3.2 Import Dataset
+
+The HR Employee Attrition dataset was uploaded and imported into R for preparation and analysis.
+```r
+# Upload CSV file in Google Colab or R environment
+uploaded_file <- file.choose()
+
+# Read the HR dataset
+hr_data <- read_csv(uploaded_file)
+
+# Preview the first few rows
+head(hr_data)
+```
